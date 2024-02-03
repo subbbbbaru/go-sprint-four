@@ -24,9 +24,17 @@ jobs:
 
       - name: Gather files
         run: |
+<<<<<<< HEAD
           cp .autotests/cmd/fitnesstest/main_test.go main_test.go
 
       - name: Run tests
         run: |
           go mod tidy
+=======
+          cp .autotests/cmd/fitnesstest/main_test.go ftracker/main_test.go
+      - name: Run tests
+        run: |
+          go mod tidy
+          cd ftracker
+>>>>>>> 5c41562cdf1b56504069e8bd1a60ba055f6f305e
           go test -test.v ./...
